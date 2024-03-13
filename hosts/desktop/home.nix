@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
 	home.username = "cowe";
@@ -33,7 +33,12 @@
 		../../modules/git.nix
         ../../modules/vim.nix
         ../../modules/zsh.nix
-	];
+        ../../modules/default.nix
+    ];
+
+    #config.modules = {
+    #  git.enable = true;
+    #};
 
 	home.sessionVariables = {
 		EDITOR = "vim";
