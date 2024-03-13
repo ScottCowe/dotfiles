@@ -35,6 +35,12 @@
     xwayland.enable = true;
   };
 
+  environment.shells = with pkgs; [ zsh ];
+
+  programs.zsh.enable = true;
+
+  users.defaultUserShell = pkgs.zsh;
+
 	environment.sessionVariables = {
 		WLR_NO_HARDWARE_CURSORS = "1";
 		NIXOS_OZONE_WL = "1";

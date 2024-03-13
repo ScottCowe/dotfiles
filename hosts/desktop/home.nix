@@ -28,7 +28,8 @@
 	imports = [
 		../../modules/firefox.nix
 		../../modules/git.nix
-		../../modules/vim.nix
+        ../../modules/vim.nix
+        ../../modules/zsh.nix
 	];
 
 	home.sessionVariables = {
