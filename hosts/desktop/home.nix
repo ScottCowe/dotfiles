@@ -9,7 +9,10 @@
 	nixpkgs.config.allowUnfree = true;
 
 	home.packages = with pkgs; [
-		discord
+      (discord.override {
+        withOpenASAR = true;
+        withVencord = true;
+      })
 		alacritty
 		rofi
 		mako
@@ -50,7 +53,6 @@
 	};
 
 	services.ssh-agent.enable = true;
-	#services.gvfs.enable = true;
 
 	programs.home-manager.enable = true;
 }

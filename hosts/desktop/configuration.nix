@@ -83,6 +83,8 @@
      AddKeysToAgent yes
   '';
 
+  services.gvfs.enable = true;
+
   system.stateVersion = "23.11";
 }
 
