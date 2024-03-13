@@ -14,8 +14,9 @@
 	];
 
 	imports = [
-		../../modules/home-manager/firefox.nix
-		../../modules/home-manager/git.nix
+		../../modules/firefox.nix
+        ../../modules/git.nix
+        ../../modules/vim.nix
 	];
 
 	home.sessionVariables = {
