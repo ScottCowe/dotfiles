@@ -21,22 +21,22 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-	  nixosConfigurations = {
-	  	desktop = nixpkgs.lib.nixosSystem {
+      nixosConfigurations = {
+        desktop = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
           modules = [ 
             ./hosts/desktop/configuration.nix
             home-manager.nixosModules.default
           ];
-		};
+        };
 
-		laptop = nixpkgs.lib.nixosSystem {
-		  specialArgs = {inherit inputs;};
-		  modules = [ 
+        laptop = nixpkgs.lib.nixosSystem {
+          specialArgs = {inherit inputs;};
+          modules = [ 
             ./hosts/laptop/configuration.nix
             inputs.home-manager.nixosModules.default
           ];
-		};
-	  };
+        };
+      };
     };
 }
