@@ -10,6 +10,7 @@
     git.enable = true;
     zsh.enable = true;
     vim.enable = true;
+    ssh.enable = true;
     firefox.enable = true;
     discord.enable = true;
   };

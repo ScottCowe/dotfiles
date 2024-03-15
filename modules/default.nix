@@ -7,6 +7,7 @@
     ./git
     ./zsh
     ./vim
+    ./ssh
     ./firefox
     ./discord
   ];

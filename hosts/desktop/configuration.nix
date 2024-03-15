@@ -71,13 +71,6 @@
     extraGroups = [ "wheel" ]; 
   };
 
-  programs.ssh.startAgent = true;
-
-  programs.ssh.extraConfig = ''
-     Host *
-     AddKeysToAgent yes
-  '';
-
   services.gvfs = {
     enable = true;
     package = lib.mkForce pkgs.gnome3.gvfs; 
