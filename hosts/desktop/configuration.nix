@@ -1,21 +1,17 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports =
-    [ 
-      #./hardware-configuration.nix
-      #inputs.home-manager.nixosModules.default
-    ];
-
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.device = "nodev";
   boot.loader.grub.efiSupport = true;
-
-  #networking.hostName = "unicorn"; 
   
   time.timeZone = "Europe/Edinburgh";
 
   i18n.defaultLocale = "en_US.UTF-8";
+  console = {
+    font = "JetBrainsMono";
+    keyMap = "us";
+  }; 
 
   security.rtkit.enable = true;
   services.pipewire = {
@@ -34,14 +30,20 @@
     enable = true;
     xwayland.enable = true;
   };
-
-  environment.shells = with pkgs; [ zsh ];
-
+  
   programs.zsh.enable = true;
 
   users.defaultUserShell = pkgs.zsh;
 
-	environment.sessionVariables = {
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    liberation_ttf
+    jetbrains-mono
+  ];
+  
+  environment.sessionVariables = {
 		WLR_NO_HARDWARE_CURSORS = "1";
 		NIXOS_OZONE_WL = "1";
 		MOZ_ENABLE_WAYLAND = "1";
@@ -69,13 +71,6 @@
     extraGroups = [ "wheel" ]; 
   };
 
-  #home-manager = {
-  #  extraSpecialArgs = { inherit inputs; };
-  #  users = {
-  #    "cowe" = import ./home.nix;
-  #  };
-  #};
-
   programs.ssh.startAgent = true;
 
   programs.ssh.extraConfig = ''
@@ -83,7 +78,10 @@
      AddKeysToAgent yes
   '';
 
-  services.gvfs.enable = true;
+  services.gvfs = {
+    enable = true;
+    package = lib.mkForce pkgs.gnome3.gvfs; 
+  };
 
   system.stateVersion = "23.11";
 }

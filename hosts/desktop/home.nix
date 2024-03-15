@@ -6,13 +6,13 @@
 
 	home.stateVersion = "23.11"; 
 
-	nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowUnfree = true;
 
 	home.packages = with pkgs; [
-      (discord.override {
-        withOpenASAR = true;
-        withVencord = true;
-      })
+      #(discord.override {
+      #  withOpenASAR = true;
+      #  withVencord = true;
+      #})
 		alacritty
 		rofi
 		mako
@@ -33,16 +33,13 @@
 		../../modules/git.nix
         ../../modules/vim.nix
         ../../modules/zsh.nix
+        ../../modules/discord.nix
         ../../modules/default.nix
     ];
 
     #config.modules = {
     #  git.enable = true;
     #};
-
-	home.sessionVariables = {
-		EDITOR = "vim";
-	};
 
 	gtk = {
 		enable = true;

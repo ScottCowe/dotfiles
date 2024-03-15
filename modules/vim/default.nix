@@ -8,6 +8,7 @@ in {
   config = mkIf cfg.enable {
     programs.vim = {
       enable = true;
+      defaultEditor = true;
 
       settings = {
         number = true;
