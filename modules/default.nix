@@ -3,5 +3,8 @@
 {
   imports = [
     ./git
+    ./zsh
+    ./vim
+    ./firefox
   ];
 }

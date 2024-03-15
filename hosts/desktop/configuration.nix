@@ -3,15 +3,15 @@
 {
   imports =
     [ 
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
+      #./hardware-configuration.nix
+      #inputs.home-manager.nixosModules.default
     ];
 
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.device = "nodev";
   boot.loader.grub.efiSupport = true;
 
-  networking.hostName = "unicorn"; 
+  #networking.hostName = "unicorn"; 
   
   time.timeZone = "Europe/Edinburgh";
 
@@ -69,12 +69,12 @@
     extraGroups = [ "wheel" ]; 
   };
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "cowe" = import ./home.nix;
-    };
-  };
+  #home-manager = {
+  #  extraSpecialArgs = { inherit inputs; };
+  #  users = {
+  #    "cowe" = import ./home.nix;
+  #  };
+  #};
 
   programs.ssh.startAgent = true;
 
