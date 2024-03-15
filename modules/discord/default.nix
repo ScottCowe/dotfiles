@@ -6,6 +6,7 @@ let
 in {
   options.modules.discord = { enable = mkEnableOption "discord"; };
   config = mkIf cfg.enable {
+    nixpkgs.config.allowUnfree = true; 
     home.packages = with pkgs; [
       (discord.override {
         withOpenASAR = true;

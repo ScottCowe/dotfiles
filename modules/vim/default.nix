@@ -12,7 +12,7 @@ in {
 
       settings = {
         number = true;
-        relativeNumber = true;
+        relativenumber = true;
         tabstop = 4;
       };
     };
