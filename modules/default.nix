@@ -8,6 +8,7 @@
     ./zsh
     ./vim
     ./ssh
+    ./gtk
     ./firefox
     ./discord
   ];
