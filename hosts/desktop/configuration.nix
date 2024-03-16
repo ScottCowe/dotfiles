@@ -9,7 +9,7 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
-    font = "JetBrainsMono";
+    font = "Lat2-Terminus16";
     keyMap = "us";
   }; 
 
@@ -26,12 +26,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-  
   programs.zsh.enable = true;
+  programs.dconf.enable = true;
 
   users.defaultUserShell = pkgs.zsh;
 
@@ -41,8 +37,9 @@
     noto-fonts-emoji
     liberation_ttf
     jetbrains-mono
+    roboto
   ];
-  
+
   environment.sessionVariables = {
 		WLR_NO_HARDWARE_CURSORS = "1";
 		NIXOS_OZONE_WL = "1";

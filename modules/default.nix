@@ -14,6 +14,7 @@
     ./firefox
     ./discord
     ./packages
+    ./hyprland
     ./alacritty
   ];
 }
