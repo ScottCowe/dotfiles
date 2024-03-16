@@ -1,29 +1,22 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
-	home.username = "cowe";
-	home.homeDirectory = "/home/cowe";
+  imports = [
+    ../../modules/default.nix
+  ];
 
-	home.stateVersion = "23.11"; 
-
-	nixpkgs.config.allowUnfree = true;
-
-	home.packages = with pkgs; [
-		discord
-		vlc
-	];
-
-	imports = [
-		../../modules/firefox.nix
-        ../../modules/git.nix
-        ../../modules/vim.nix
-	];
-
-	home.sessionVariables = {
-		EDITOR = "vim";
-	};
-
-	services.ssh-agent.enable = true;
-
-	programs.home-manager.enable = true;
+  config.modules = {
+    git.enable = true;
+    zsh.enable = true;
+    vim.enable = true;
+    ssh.enable = true;
+    gtk.enable = true;
+    rofi.enable = true;
+    thunar.enable = true;
+    firefox.enable = true;
+    discord.enable = true;
+    packages.enable = true;
+    hyprland.enable = true;
+    alacritty.enable = true;
+  };
 }
