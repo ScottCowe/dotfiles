@@ -6,8 +6,9 @@ let
 in {
   options.modules.rofi = { enable = mkEnableOption "rofi"; };
   config = mkIf cfg.enable {
-    programs.rofi = {
-      enable = true;
-    };
+    home.packages = with pkgs; [ rofi ];
+
+    home.file.".config/rofi/config.rasi".source = ./config.rasi;
+    home.file.".local/share/rofi/themes/catppuccin-mocha.rasi".source = ./catppuccin-mocha.rasi;
   };
 }

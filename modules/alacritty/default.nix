@@ -8,6 +8,11 @@ in {
   config = mkIf cfg.enable {
     programs.alacritty = {
       enable = true;
+      settings = {
+        import = [
+          (./. + "/catppuccin-mocha.toml")
+        ]; 
+      };
     };
   };
 }
