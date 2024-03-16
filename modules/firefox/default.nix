@@ -31,6 +31,18 @@ in {
               updateInterval = 24 * 60 * 60 * 1000;
               definedAliases = [ "@nw" ];
             };
+            "MyNixOS" = {
+              urls = [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
+              iconUpdateURL = "https://mynixos.com/favicon.ico";
+              updateInterval = 24 * 60 * 60 * 1000;
+              definedAliases = [ "@no" ];
+            };
+            "YouTube" = {
+              urls = [{ template = "https://www.youtube.com/results?search_query={searchTerms}"; }];
+              iconUpdateURL = "https://www.youtube.com/s/desktop/4feff1e2/img/favicon_96x96.png";
+              updateInterval = 24 * 60 * 60 * 1000;
+              definedAliases = [ "@yt" ];
+            };
             "Wikipedia (en)".metaData.alias = "@wiki";
             "Google".metaData.hidden = true;
             "Amazon.com".metaData.hidden = true;

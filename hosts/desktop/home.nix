@@ -12,6 +12,7 @@
     ssh.enable = true;
     gtk.enable = true;
     rofi.enable = true;
+    fonts.enable = true;
     thunar.enable = true;
     firefox.enable = true;
     discord.enable = true;

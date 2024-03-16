@@ -10,6 +10,7 @@
     ./ssh
     ./gtk
     ./rofi
+    ./fonts
     ./thunar
     ./firefox
     ./discord
