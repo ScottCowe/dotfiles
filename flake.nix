@@ -13,8 +13,6 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons"; 
       inputs.nixpkgs.follows = "nixpkgs"; 
     };
-
-    #hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -29,8 +27,10 @@
           specialArgs = { inherit inputs; };
           modules = [
             { networking.hostName = hostname; }
-            
-            (./. + "/hosts/${hostname}/configuration.nix")
+
+            (./. + "/modules/system/configuration.nix")
+
+            (./. + "/hosts/${hostname}/extra.nix")
             (./. + "/hosts/${hostname}/hardware-configuration.nix")
             
             home-manager.nixosModules.home-manager
