@@ -9,6 +9,7 @@
     ./vim
     ./ssh
     ./gtk
+    ./thunar
     ./firefox
     ./discord
   ];

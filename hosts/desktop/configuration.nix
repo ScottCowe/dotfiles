@@ -71,11 +71,6 @@
     extraGroups = [ "wheel" ]; 
   };
 
-  services.gvfs = {
-    enable = true;
-    package = lib.mkForce pkgs.gnome3.gvfs; 
-  };
-
   system.stateVersion = "23.11";
 }
 

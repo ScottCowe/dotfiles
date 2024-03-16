@@ -12,6 +12,7 @@
     vim.enable = true;
     ssh.enable = true;
     gtk.enable = true;
+    thunar.enable = true;
     firefox.enable = true;
     discord.enable = true;
   };
