@@ -9,8 +9,11 @@
     ./vim
     ./ssh
     ./gtk
+    ./rofi
     ./thunar
     ./firefox
     ./discord
+    ./packages
+    ./alacritty
   ];
 }
