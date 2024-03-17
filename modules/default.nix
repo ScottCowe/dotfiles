@@ -12,6 +12,7 @@
     ./rofi
     ./fonts
     ./thunar
+    ./neovim
     ./firefox
     ./discord
     ./packages

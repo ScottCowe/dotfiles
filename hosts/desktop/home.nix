@@ -14,6 +14,7 @@
     rofi.enable = true;
     fonts.enable = true;
     thunar.enable = true;
+    neovim.enable = true;
     firefox.enable = true;
     discord.enable = true;
     packages.enable = true;
