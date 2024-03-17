@@ -21,10 +21,10 @@ in {
         nvim-web-devicons
 
         telescope-fzf-native-nvim
-				{
-					plugin = telescope-nvim;
-					config = toLuaFile ./plugin/telescope.lua;
-				}
+        {
+          plugin = telescope-nvim;
+          config = toLuaFile ./plugin/telescope.lua;
+        }
       ];
 
       extraLuaConfig = ''
@@ -36,9 +36,9 @@ in {
         vim.o.number = true
         vim.o.relativenumber = true
 
-				vim.o.tabstop = 2
-				vim.o.shiftwidth = 2
-				vim.o.expandtab = true
+        vim.o.tabstop = 2
+        vim.o.shiftwidth = 2
+        vim.o.expandtab = true
 
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
