@@ -12,6 +12,12 @@ in {
         import = [
           (./. + "/catppuccin-mocha.toml")
         ]; 
+        font = {
+          normal = {
+            family = "JetBrains Mono Nerd Font";
+            style = "Regular";
+          };
+        };
       };
     };
   };
