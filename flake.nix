@@ -48,5 +48,7 @@
         desktop = mkSystem inputs.nixpkgs "x86_64-linux" "desktop";
         laptop = mkSystem inputs.nixpkgs "x86_64-linux" "laptop";
       };
+
+      devShells.${system}.java = (import ./shells/java.nix { inherit pkgs; });
     };
 }

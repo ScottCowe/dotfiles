@@ -13,7 +13,7 @@ in {
       syntaxHighlighting.enable = true;
 
       shellAliases = {
-        # ll = "ls -l";
+        devjava = "nix develop ~/dotfiles#java";
       };
 
       history.size = 10000;
