@@ -64,7 +64,7 @@ in {
         DisableFirefoxStudies = true;
         EnableTrackingProtection = {
           Value = true;
-          Locked = true;
+          Locked = false;
           Cryptomining = true;
           Fingerprinting = true;
         };
