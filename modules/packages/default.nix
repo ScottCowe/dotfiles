@@ -11,6 +11,7 @@ in {
       grim slurp
       wl-clipboard
       zip unzip
+      cmatrix
     ]; 
   };
 }

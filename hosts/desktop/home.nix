@@ -20,5 +20,6 @@
     packages.enable = true;
     hyprland.enable = true;
     alacritty.enable = true;
+    prismlauncher.enable = true;
   };
 }

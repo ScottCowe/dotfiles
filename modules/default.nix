@@ -18,5 +18,6 @@
     ./packages
     ./hyprland
     ./alacritty
+    ./prismlauncher
   ];
 }
