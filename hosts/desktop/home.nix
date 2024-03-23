@@ -12,6 +12,7 @@
     ssh.enable = true;
     gtk.enable = true;
     rofi.enable = true;
+    idea.enable = true;
     fonts.enable = true;
     thunar.enable = true;
     neovim.enable = true;
