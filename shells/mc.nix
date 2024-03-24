@@ -8,7 +8,7 @@ pkgs.mkShell
     jetbrains.idea-community
   ];
 
-  LD_LIBRARY_PATH = "${pkgs.libglvnd}";
+  LD_LIBRARY_PATH = "${pkgs.libglvnd}/lib";
 
   shellHook = ''
     exec zsh
