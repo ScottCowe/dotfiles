@@ -10,7 +10,6 @@
     ./ssh
     ./gtk
     ./rofi
-    ./idea
     ./fonts
     ./thunar
     ./neovim

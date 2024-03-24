@@ -49,6 +49,9 @@
         laptop = mkSystem inputs.nixpkgs "x86_64-linux" "laptop";
       };
 
-      devShells.${system}.java = (import ./shells/java.nix { inherit pkgs; });
+      devShells.${system} = {
+        java = (import ./shells/java.nix { inherit pkgs; });
+        mc = (import ./shells/mc.nix { inherit pkgs; });
+      };
     };
 }

@@ -14,6 +14,7 @@ in {
 
       shellAliases = {
         devjava = "nix develop ~/dotfiles#java";
+        devmc = "nix develop ~/dotfiles#mc";
       };
 
       history.size = 10000;

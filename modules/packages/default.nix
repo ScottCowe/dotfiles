@@ -12,6 +12,7 @@ in {
       wl-clipboard
       zip unzip
       cmatrix
+      neofetch
     ]; 
   };
 }
