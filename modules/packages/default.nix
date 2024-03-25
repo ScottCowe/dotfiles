@@ -13,6 +13,7 @@ in {
       zip unzip
       cmatrix
       neofetch
+      pavucontrol
     ]; 
   };
 }
