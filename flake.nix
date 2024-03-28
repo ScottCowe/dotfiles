@@ -50,7 +50,6 @@
       };
 
       devShells.${system} = {
-        java = (import ./shells/java.nix { inherit pkgs; });
         mc = (import ./shells/mc.nix { inherit pkgs; });
       };
     };

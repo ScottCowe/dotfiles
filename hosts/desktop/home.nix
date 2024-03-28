@@ -13,6 +13,7 @@
     gtk.enable = true;
     rofi.enable = true;
     gimp.enable = true;
+    idea.enable = true;
     fonts.enable = true;
     thunar.enable = true;
     neovim.enable = true;

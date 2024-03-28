@@ -12,7 +12,8 @@
     ssh.enable = true;
     gtk.enable = true;
     rofi.enable = true;
-    gimp.enable = true;
+    gimp.enable = false;
+    idea.enable = false;
     fonts.enable = true;
     thunar.enable = true;
     neovim.enable = true;
@@ -21,6 +22,6 @@
     packages.enable = true;
     hyprland.enable = true;
     alacritty.enable = true;
-    prismlauncher.enable = true;
+    prismlauncher.enable = false;
   };
 }
