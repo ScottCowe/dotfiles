@@ -17,6 +17,7 @@
     ./neovim
     ./firefox
     ./discord
+    ./wezterm
     ./packages
     ./hyprland
     ./alacritty

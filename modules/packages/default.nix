@@ -14,6 +14,8 @@ in {
       cmatrix
       neofetch
       pavucontrol
+      thunderbird
+      alsa-oss
     ]; 
   };
 }
