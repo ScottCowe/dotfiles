@@ -48,9 +48,5 @@
         desktop = mkSystem inputs.nixpkgs "x86_64-linux" "desktop";
         laptop = mkSystem inputs.nixpkgs "x86_64-linux" "laptop";
       };
-
-      devShells.${system} = {
-        mc = (import ./shells/mc.nix { inherit pkgs; });
-      };
     };
 }

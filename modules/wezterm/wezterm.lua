@@ -1,5 +1,7 @@
-local wezterm = require 'wezterm';
+local wezterm = require "wezterm";
 
 return {
-  enable_wayland = false
+  enable_wayland = false,
+  color_scheme = "Catppuccin Mocha",
+  --font = wezterm.font "Fira Code", 
 }

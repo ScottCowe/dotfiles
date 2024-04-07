@@ -12,7 +12,9 @@ in {
       noto-fonts-cjk
       noto-fonts-emoji
       liberation_ttf
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      fira-code
+      fira-code-symbols
+      (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" ]; })
     ]; 
   };
 }
