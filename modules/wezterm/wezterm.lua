@@ -13,6 +13,16 @@ config.hide_tab_bar_if_only_one_tab = true
 config.disable_default_key_bindings = true
 config.keys = {
   {
+    key = "c",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.CopyTo "Clipboard"
+  },
+  {
+    key = "v",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.PasteFrom "Clipboard"
+  },
+  {
     key = "Enter",
     mods = "ALT",
     action = wezterm.action.SpawnTab "DefaultDomain"
