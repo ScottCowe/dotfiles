@@ -85,6 +85,24 @@ config.keys = {
     mods = "ALT",
     action = wezterm.action.ActivatePaneDirection "Right"
   },
+  {
+    key = "LeftArrow",
+    mods = "ALT",
+    action = wezterm.action.AdjustPaneSize { "Left", 1 }
+  },
+  {
+    key = "DownArrow",
+    mods = "ALT",
+    action = wezterm.action.AdjustPaneSize { "Down", 1 }
+  },{
+    key = "UpArrow",
+    mods = "ALT",
+    action = wezterm.action.AdjustPaneSize { "Up", 1 }
+  },{
+    key = "RightArrow",
+    mods = "ALT",
+    action = wezterm.action.AdjustPaneSize { "Right", 1 }
+  },
 }
 
 for i = 1, 9 do
