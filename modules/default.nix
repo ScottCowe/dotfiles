@@ -11,7 +11,6 @@
     ./gtk
     ./rofi
     ./gimp
-    ./idea
     ./fonts
     ./thunar
     ./neovim
