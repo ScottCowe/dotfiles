@@ -16,6 +16,7 @@ in {
       pavucontrol
       thunderbird
       alsa-oss
+      libreoffice
     ]; 
   };
 }
