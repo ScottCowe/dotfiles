@@ -25,6 +25,11 @@ in {
           plugin = telescope-nvim;
           config = toLuaFile ./plugin/telescope.lua;
         }
+
+        {
+          plugin = catppuccin-nvim;
+          config = "colorscheme catppuccin-mocha";
+        }
       ];
 
       extraLuaConfig = ''
