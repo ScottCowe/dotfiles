@@ -30,6 +30,11 @@ in {
           plugin = catppuccin-nvim;
           config = "colorscheme catppuccin-mocha";
         }
+
+        {
+          plugin = comment-nvim;
+          config = toLua "require(\"Comment\").setup()";
+        }
       ];
 
       extraLuaConfig = ''
