@@ -16,6 +16,10 @@ in {
       vimAlias = true;
       vimdiffAlias = true;
 
+      extraPackages = with pkgs; [
+        lua-language-server
+      ];
+
       plugins = with pkgs.vimPlugins; [
         lualine-nvim
         nvim-web-devicons
@@ -31,24 +35,31 @@ in {
           config = "colorscheme catppuccin-mocha";
         }
 
+        comment-nvim
+
         {
-          plugin = comment-nvim;
-          config = toLua "require(\"Comment\").setup()";
+          plugin = nvim-lspconfig;
+          config = toLuaFile ./plugin/lsp.lua;
         }
+
+        {
+          plugin = nvim-cmp;
+          config = toLuaFile ./plugin/cmp.lua;
+        }
+
+        luasnip
+
+        cmp_luasnip
+        cmp-nvim-lsp
       ];
 
       extraLuaConfig = ''
-        vim.g.mapleader = ' '
-        vim.g.maplocalleader = ' '
+      	${builtins.readFile ./options.lua}
 
-        vim.o.clipboard = 'unnamedplus'
-
-        vim.o.number = true
-        vim.o.relativenumber = true
-
-        vim.o.tabstop = 2
-        vim.o.shiftwidth = 2
-        vim.o.expandtab = true
+        require("lualine").setup({
+          icons_enabled = true,
+          theme = 'auto',
+        })
 
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
@@ -56,10 +67,7 @@ in {
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
-        require("lualine").setup({
-          icons_enabled = true,
-          theme = 'onedark',
-        })
+        require("Comment").setup()
       '';
     };
   };
