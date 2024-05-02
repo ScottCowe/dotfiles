@@ -64,6 +64,8 @@ in {
         cmp-nvim-lsp
 
         neodev-nvim
+
+        gitsigns-nvim
       ];
 
       extraLuaConfig = ''
@@ -81,6 +83,8 @@ in {
         })
 
         require("Comment").setup()
+        
+        require("gitsigns").setup()
       '';
     };
   };
