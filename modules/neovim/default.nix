@@ -21,7 +21,7 @@ in {
         lua-language-server
         nixd
       ];
-
+      
       plugins = with pkgs.vimPlugins; [
         lualine-nvim
         nvim-web-devicons
@@ -66,6 +66,8 @@ in {
         neodev-nvim
 
         gitsigns-nvim
+
+        nvim-autopairs
       ];
 
       extraLuaConfig = ''
@@ -85,6 +87,8 @@ in {
         require("Comment").setup()
         
         require("gitsigns").setup()
+
+        require("nvim-autopairs").setup({})
       '';
     };
   };
