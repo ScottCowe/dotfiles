@@ -23,6 +23,8 @@ in {
       plugins = with pkgs.vimPlugins; [
         lualine-nvim
         nvim-web-devicons
+        
+        comment-nvim
 
         telescope-fzf-native-nvim
         {
@@ -35,8 +37,6 @@ in {
           config = "colorscheme catppuccin-mocha";
         }
 
-        comment-nvim
-
         {
           plugin = nvim-lspconfig;
           config = toLuaFile ./plugin/lsp.lua;
@@ -48,9 +48,12 @@ in {
         }
 
         luasnip
+        friendly-snippets
 
         cmp_luasnip
         cmp-nvim-lsp
+
+        neodev-nvim
       ];
 
       extraLuaConfig = ''

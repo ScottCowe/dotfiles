@@ -15,11 +15,33 @@ local on_attach = function(_, bufnr)
   bufmap('gr', require('telescope.builtin').lsp_references)
   bufmap('<leader>s', require('telescope.builtin').lsp_document_symbols)
   bufmap('<leader>S', require('telescope.builtin').lsp_dynamic_workspace_symbols)
-  
+
   bufmap('K', vim.lsp.buf.hover)
 
-  vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
+  vim.api.nvim_buf_create_user_command(bufnr, 'Format', function()
     vim.lsp.buf.format()
   end, {})
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
+require('neodev').setup()
+
+local lspconfig = require('lspconfig')
+
+lspconfig.lua_ls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+        Lua = {
+            workspace = {
+              checkThirdParty = false,
+              library = {
+                vim.env.VIMRUNTIME
+              }
+            },
+            telemetry = { enable = false },
+        },
+    }
+}
