@@ -17,7 +17,9 @@ in {
       vimdiffAlias = true;
 
       extraPackages = with pkgs; [
+        ripgrep
         lua-language-server
+        nixd
       ];
 
       plugins = with pkgs.vimPlugins; [
@@ -47,6 +49,14 @@ in {
           config = toLuaFile ./plugin/cmp.lua;
         }
 
+        {
+          plugin = (nvim-treesitter.withPlugins (p: [
+            p.tree-sitter-nix
+            p.tree-sitter-lua
+          ]));
+          config = toLuaFile ./plugin/treesitter.lua;
+        }
+
         luasnip
         friendly-snippets
 
@@ -59,16 +69,16 @@ in {
       extraLuaConfig = ''
       	${builtins.readFile ./options.lua}
 
-        require("lualine").setup({
-          icons_enabled = true,
-          theme = 'auto',
-        })
-
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+        require("lualine").setup({
+          icons_enabled = true,
+          theme = 'auto',
+        })
 
         require("Comment").setup()
       '';
