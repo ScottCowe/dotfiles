@@ -20,6 +20,7 @@ in {
         ripgrep
         lua-language-server
         nixd
+        jdt-language-server
       ];
       
       plugins = with pkgs.vimPlugins; [
@@ -50,10 +51,7 @@ in {
         }
 
         {
-          plugin = (nvim-treesitter.withPlugins (p: [
-            p.tree-sitter-nix
-            p.tree-sitter-lua
-          ]));
+          plugin = nvim-treesitter.withAllGrammars;
           config = toLuaFile ./plugin/treesitter.lua;
         }
 
@@ -68,6 +66,8 @@ in {
         gitsigns-nvim
 
         nvim-autopairs
+
+        nvim-jdtls
       ];
 
       extraLuaConfig = ''
@@ -89,6 +89,12 @@ in {
         require("gitsigns").setup()
 
         require("nvim-autopairs").setup({})
+
+        local config = {
+            cmd = { "${pkgs.jdt-language-server}/bin/jdtls" },
+            root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+        }
+        require('jdtls').start_or_attach(config)
       '';
     };
   };
