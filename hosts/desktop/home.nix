@@ -16,6 +16,7 @@
     fonts.enable = true;
     thunar.enable = true;
     neovim.enable = true;
+    nixvim.enable = true;
     firefox.enable = true;
     wezterm.enable = true;
     discord.enable = true;

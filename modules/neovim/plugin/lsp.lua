@@ -7,8 +7,8 @@ local on_attach = function(_, bufnr)
   bufmap('<leader>a', vim.lsp.buf.code_action, bufnr)
 
   bufmap('gd', vim.lsp.buf.definition, bufnr)
-  bufmap('gD', vim.lsp.buf.declaration, bufnr)
-  bufmap('gI', vim.lsp.buf.implementation, bufnr)
+  bufmap('gdd', vim.lsp.buf.declaration, bufnr)
+  bufmap('gi', vim.lsp.buf.implementation, bufnr)
   bufmap('<leader>D', vim.lsp.buf.type_definition, bufnr)
 
   bufmap('gr', require('telescope.builtin').lsp_references, bufnr)
