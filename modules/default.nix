@@ -14,7 +14,6 @@
     ./fonts
     ./thunar
     ./neovim
-    ./nixvim
     ./firefox
     ./discord
     ./wezterm
