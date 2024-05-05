@@ -13,6 +13,8 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons"; 
       inputs.nixpkgs.follows = "nixpkgs"; 
     };
+
+    nixvim-flake.url = "github:ScottCowe/nixvim-flake";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -36,7 +38,10 @@
             home-manager.nixosModules.home-manager
             {
               home-manager = {
-                extraSpecialArgs = { inherit inputs; };
+                extraSpecialArgs = { 
+                  inherit inputs; 
+                  inherit system;
+                };
                 users.cowe = (./. + "/hosts/${hostname}/home.nix"); 
               };   
             }
