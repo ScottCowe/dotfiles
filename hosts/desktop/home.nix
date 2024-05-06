@@ -8,7 +8,7 @@
   config.modules = {
     git.enable = true;
     zsh.enable = true;
-    vim.enable = true;
+    vim.enable = false;
     ssh.enable = true;
     gtk.enable = true;
     rofi.enable = true;
