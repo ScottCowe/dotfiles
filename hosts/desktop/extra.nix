@@ -56,4 +56,8 @@
 
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "cowe" ];
+
+  services.logmein-hamachi.enable = true;
+
+  programs.noisetorch.enable = true;
 }

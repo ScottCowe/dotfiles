@@ -12,7 +12,6 @@ in {
       wl-clipboard
       zip unzip
       cmatrix
-      neofetch
       pavucontrol
       thunderbird
       alsa-oss

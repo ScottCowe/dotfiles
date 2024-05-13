@@ -21,5 +21,6 @@
     ./hyprland
     ./alacritty
     ./prismlauncher
+    ./macchina
   ];
 }

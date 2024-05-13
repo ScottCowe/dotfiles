@@ -23,5 +23,6 @@
     hyprland.enable = true;
     alacritty.enable = true;
     prismlauncher.enable = true;
+    macchina.enable = true;
   };
 }
