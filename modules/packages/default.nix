@@ -8,12 +8,10 @@ in {
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       mako
-      grim slurp
-      wl-clipboard
       zip unzip
       cmatrix
-      pavucontrol
       thunderbird
+      pavucontrol
       alsa-oss
       libreoffice
     ]; 

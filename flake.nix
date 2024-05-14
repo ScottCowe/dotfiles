@@ -1,5 +1,5 @@
 {
-  description = "NixOS config";
+  description = "ScottCowe's NixOS config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -19,10 +19,6 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-      lib = nixpkgs.lib;
-
       mkSystem = pkgs: system: hostname:
         pkgs.lib.nixosSystem {
           system = system;

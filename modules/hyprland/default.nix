@@ -6,9 +6,10 @@ let
 in {
   options.modules.hyprland = { enable = mkEnableOption "hyprland"; };
   config = mkIf cfg.enable {
-    # home.packages = with pkgs; [ hyprland ]; 
-    #
-    # home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
+    home.packages = with pkgs; [ 
+      wl-clipboard
+      grim slurp
+    ]; 
 
     wayland.windowManager.hyprland.enable = true;
 
