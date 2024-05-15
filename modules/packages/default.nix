@@ -12,7 +12,6 @@ in {
       cmatrix
       thunderbird
       pavucontrol
-      alsa-oss
       libreoffice
     ]; 
   };
