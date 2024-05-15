@@ -6,6 +6,7 @@
   ];
 
   config.modules = {
+    colors.enable = true;
     git.enable = true;
     zsh.enable = true;
     vim.enable = false;
@@ -24,5 +25,6 @@
     alacritty.enable = true;
     prismlauncher.enable = true;
     macchina.enable = true;
+    mako.enable = true;
   };
 }

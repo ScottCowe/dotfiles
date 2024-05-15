@@ -6,6 +6,7 @@
   ];
 
   config.modules = {
+    colors.enable = true;
     git.enable = true;
     zsh.enable = true;
     vim.enable = true;
@@ -23,5 +24,6 @@
     hyprland.enable = true;
     alacritty.enable = true;
     prismlauncher.enable = false;
+    mako.enable = true;
   };
 }

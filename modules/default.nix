@@ -4,6 +4,8 @@
   home.stateVersion = "23.11";
 
   imports = [
+    inputs.nix-colors.homeManagerModules.default
+    ./colors
     ./git
     ./zsh
     ./vim
@@ -22,5 +24,6 @@
     ./alacritty
     ./prismlauncher
     ./macchina
+    ./mako
   ];
 }
