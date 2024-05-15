@@ -13,5 +13,10 @@ in {
         withVencord = true;
       })
     ];
+
+    home.file.".config/Vencord/settings/quickCss.css".text = ''
+      @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
+      @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-blue.theme.css");
+    '';
   };
 }
