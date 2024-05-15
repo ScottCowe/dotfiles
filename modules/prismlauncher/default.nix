@@ -3,6 +3,7 @@
 with lib;
 let
   cfg = config.modules.prismlauncher;
+  catppuccin-mocha = import ./catppuccin-mocha.nix { inherit pkgs; };
 in {
   options.modules.prismlauncher = { enable = mkEnableOption "prismlauncher"; };
   config = mkIf cfg.enable {
@@ -13,6 +14,6 @@ in {
       })
     ];
 
-    home.file.".local/share/PrismLauncher/themes/Catppuccin-Mocha".source = ./Catppuccin-Mocha;
+    home.file.".local/share/PrismLauncher/themes/Catppuccin-Mocha".source = catppuccin-mocha;
   };
 }
