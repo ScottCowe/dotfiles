@@ -19,7 +19,7 @@
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-colors, ... }@inputs:
     let
       mkSystem = pkgs: system: hostname:
         pkgs.lib.nixosSystem {
@@ -39,6 +39,7 @@
                 extraSpecialArgs = { 
                   inherit inputs; 
                   inherit system;
+                  inherit nix-colors;
                 };
                 users.cowe = (./. + "/hosts/${hostname}/home.nix"); 
               };   
