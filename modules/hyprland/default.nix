@@ -11,7 +11,10 @@ in {
       grim slurp
     ]; 
 
-    wayland.windowManager.hyprland.enable = true;
+    wayland.windowManager.hyprland = {
+      enable = true;
+      xwayland.enable = true;
+    };
 
     wayland.windowManager.hyprland.settings = {
       "$mod" = "SUPER";
@@ -61,7 +64,7 @@ in {
         gaps_in = 5;
         gaps_out = 10;
         border_size = 1;
-        "col.active_border" = "rgba(89b4faee)"; # Catppuccin Mocha Blue
+        "col.active_border" = "rgb(${config.colorScheme.palette.base0D})";
         "col.inactive_border" = "rgba(00000000)";
       };
 
