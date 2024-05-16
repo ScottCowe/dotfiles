@@ -25,5 +25,6 @@
     alacritty.enable = true;
     prismlauncher.enable = false;
     mako.enable = true;
+    wlogout.enable = true;
   };
 }

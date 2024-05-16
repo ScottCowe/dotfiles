@@ -7,7 +7,7 @@
       device = "nodev";
       efiSupport = true;
 
-      theme = pkgs.stdenv.mkDerivation rec {
+      theme = pkgs.stdenv.mkDerivation rec { 
         name = "catppuccin-mocha-grub-theme";
         
         src = pkgs.fetchFromGitHub {

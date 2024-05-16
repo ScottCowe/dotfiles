@@ -25,5 +25,6 @@
     ./prismlauncher
     ./macchina
     ./mako
+    ./wlogout
   ];
 }

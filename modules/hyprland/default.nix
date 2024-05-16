@@ -20,7 +20,7 @@ in {
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, M, exit"
+        "$mod, M, exec, wlogout"
         "$mod, Return, exec, wezterm"
         "$mod SHIFT, Q, killactive"
         "$mod, E, exec, thunar"

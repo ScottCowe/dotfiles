@@ -26,5 +26,6 @@
     prismlauncher.enable = true;
     macchina.enable = true;
     mako.enable = true;
+    wlogout.enable = true;
   };
 }
