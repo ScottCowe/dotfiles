@@ -26,5 +26,6 @@
     ./macchina
     ./mako
     ./wlogout
+    ./lf
   ];
 }

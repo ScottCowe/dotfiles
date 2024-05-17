@@ -1,4 +1,4 @@
-{ pkgs, lib, config, nix-colors, ... }:
+{ pkgs, lib, config, inputs, ... }:
 
 with lib;
 let
@@ -37,7 +37,7 @@ in {
         }
 
         window {
-          background-color: rgba(${nix-colors.lib.conversions.hexToRGBString ", " base00}, 0.5);
+          background-color: rgba(${inputs.nix-colors.lib.conversions.hexToRGBString ", " base00}, 0.5);
         }
 
         button {

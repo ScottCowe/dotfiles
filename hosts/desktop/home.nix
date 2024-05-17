@@ -27,5 +27,6 @@
     macchina.enable = true;
     mako.enable = true;
     wlogout.enable = true;
-  };
+    lf.enable = true;
+ };
 }

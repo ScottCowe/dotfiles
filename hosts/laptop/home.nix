@@ -26,5 +26,6 @@
     prismlauncher.enable = false;
     mako.enable = true;
     wlogout.enable = true;
+    lf.enable = true;
   };
 }
