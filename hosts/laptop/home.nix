@@ -11,7 +11,6 @@
     zsh.enable = true;
     vim.enable = true;
     ssh.enable = true;
-    gtk.enable = true;
     rofi.enable = true;
     gimp.enable = false;
     fonts.enable = true;

@@ -10,7 +10,6 @@
     ./zsh
     ./vim
     ./ssh
-    ./gtk
     ./rofi
     ./gimp
     ./fonts
