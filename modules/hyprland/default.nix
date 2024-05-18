@@ -23,9 +23,9 @@ in {
 
       bind = [
         "$mod, M, exec, wlogout"
-        "$mod, Return, exec, wezterm"
+        "$mod, Return, exec, kitty"
         "$mod SHIFT, Q, killactive"
-        "$mod, E, exec, thunar"
+        "$mod, E, exec, kitty lf"
         "$mod, D, exec, rofi -show drun"
         "$mod, F, fullscreen"
         ''$mod, S, exec, grim -g "$(slurp -w 0)" - | wl-copy --type image/png'' 
