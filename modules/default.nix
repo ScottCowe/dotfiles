@@ -26,5 +26,6 @@
     ./mako
     ./wlogout
     ./lf
+    ./lutris
   ];
 }

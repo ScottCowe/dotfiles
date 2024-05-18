@@ -27,5 +27,6 @@
     mako.enable = true;
     wlogout.enable = true;
     lf.enable = true;
+    lutris.enable = true;
  };
 }
