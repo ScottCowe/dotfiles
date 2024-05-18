@@ -28,5 +28,6 @@
     ./lf
     ./lutris
     ./waybar
+    ./kitty
   ];
 }
