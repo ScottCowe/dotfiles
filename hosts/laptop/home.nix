@@ -26,5 +26,6 @@
     mako.enable = true;
     wlogout.enable = true;
     lf.enable = true;
+    waybar.enable = true;
   };
 }

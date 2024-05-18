@@ -27,5 +27,6 @@
     ./wlogout
     ./lf
     ./lutris
+    ./waybar
   ];
 }

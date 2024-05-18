@@ -28,5 +28,6 @@
     wlogout.enable = true;
     lf.enable = true;
     lutris.enable = true;
+    waybar.enable = true;
  };
 }

@@ -19,6 +19,8 @@ in {
     wayland.windowManager.hyprland.settings = {
       "$mod" = "SUPER";
 
+      "exec-once" = "waybar";
+
       bind = [
         "$mod, M, exec, wlogout"
         "$mod, Return, exec, wezterm"
