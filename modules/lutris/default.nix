@@ -8,8 +8,10 @@ in {
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       (lutris.override {
-
       })
+
+      # Games
+      vintagestory
     ];
   };
 }
