@@ -63,8 +63,8 @@ in {
       );
 
       general = {
-        gaps_in = 5;
-        gaps_out = 10;
+        gaps_in = 2;
+        gaps_out = 2;
         border_size = 1;
         "col.active_border" = "rgb(${config.colorScheme.palette.base0D})";
         "col.inactive_border" = "rgba(00000000)";
