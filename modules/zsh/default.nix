@@ -13,12 +13,14 @@ in {
       syntaxHighlighting.enable = true;
 
       shellAliases = {
-        devjava = "nix develop ~/dotfiles#java";
-        devmc = "nix develop ~/dotfiles#mc";
       };
 
       history.size = 10000;
       history.path = "${config.xdg.dataHome}/zsh/history";
+
+      initExtra = ''
+        unsetopt BEEP
+      '';
 
       oh-my-zsh = {
         enable = true;

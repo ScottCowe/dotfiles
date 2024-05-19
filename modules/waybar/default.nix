@@ -39,6 +39,7 @@ in {
           "clock" = {
             tooltip-format = "{:%A}";
             format = "{:%H:%M:%S  %d/%m/%y}";
+            interval = 1;
           };
           "battery" = {
             states = {
