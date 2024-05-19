@@ -12,18 +12,19 @@ in {
       theme = "Catppuccin-Mocha";
       font =  {
         name = "FiraCode Nerd Font";
-        package = pkgs.fira-code;
+        package = pkgs.nerdfonts;
         size = 12;
       };
 
       settings = {
         clear_all_shortcuts = true;
+        enabled_layouts = "tall:bias=50;full_size=1;mirrored=false";
       };
 
       keybindings = {
         "ctrl+shift+c" = "copy_to_clipboard";
-        "ctrl+shift+v" = "paste";
-        "alt+enter" = "new_tab";
+        "ctrl+shift+v" = "paste_from_clipboard";
+        "alt+enter" = "new_tab_with_cwd";
         "alt+q" = "close_tab";
         "alt+1" = "goto_tab 1";
         "alt+2" = "goto_tab 2";
@@ -35,6 +36,12 @@ in {
         "alt+8" = "goto_tab 8";
         "alt+9" = "goto_tab 9";
         "alt+0" = "goto_tab 10";
+        "alt+shift+enter" = "new_window";
+        "alt+shift+q" = "close_window";
+        "alt+h" = "neighboring_window left";
+        "alt+j" = "neighboring_window bottom";
+        "alt+k" = "neighboring_window top";
+        "alt+l" = "neighboring_window right";
       };
     };
   };
