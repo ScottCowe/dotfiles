@@ -21,6 +21,9 @@ in {
 
       "exec-once" = "waybar";
 
+      # To fix ghost monitor issue, apparantly a kernel/driver bug
+      "monitor" = "Unknown-1,disable";
+
       bind = [
         "$mod, M, exec, wlogout"
         "$mod, Return, exec, kitty"
