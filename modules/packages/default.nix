@@ -12,6 +12,7 @@ in {
       thunderbird
       pavucontrol
       libreoffice
+      btop
     ]; 
   };
 }
