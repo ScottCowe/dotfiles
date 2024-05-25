@@ -5,7 +5,7 @@ These are the dotfiles which I use on my computer and laptop
 Inspiration (basically copied) from [notusknot's dotfiles](https://github.com/notusknot/dotfiles-nix)
 
 ## Info
-- Terminal: WezTerm/Alacritty
+- Terminal: Kitty
 - Shell: zsh
 - Window manager: Hyprland
 - Browser: Firefox
