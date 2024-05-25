@@ -6,7 +6,6 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
     ./colors
-    ./git
     ./zsh
     ./vim
     ./ssh
