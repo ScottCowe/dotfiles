@@ -32,10 +32,7 @@
           modules = [
             { networking.hostName = hostname; }
 
-            (./. + "/modules/system/configuration.nix")
-
-            (./. + "/hosts/${hostname}/extra.nix")
-            (./. + "/hosts/${hostname}/hardware-configuration.nix")
+            ./systems/${hostname}
             
             home-manager.nixosModules.home-manager
             {
@@ -44,7 +41,7 @@
                   inherit inputs; 
                   inherit system;
                 };
-                users.cowe = (./. + "/hosts/${hostname}/home.nix"); 
+                users.cowe = (./. + "/systems/${hostname}/home.nix"); 
               };   
             }
           ];
@@ -53,7 +50,7 @@
     {
       nixosConfigurations = {
         desktop = mkSystem inputs.nixpkgs "x86_64-linux" "desktop";
-        laptop = mkSystem inputs.nixpkgs "x86_64-linux" "laptop";
+        hp-laptop = mkSystem inputs.nixpkgs "x86_64-linux" "hp-laptop";
       };
     };
 }

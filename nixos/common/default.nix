@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 with lib; {
   options.common = {
@@ -14,6 +14,8 @@ with lib; {
 
   config = mkIf config.common.enable {
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+    nixpkgs.config.allowUnfree = true;
 
     time.timeZone = "Europe/London";
 
@@ -37,5 +39,24 @@ with lib; {
       driSupport = true;
       driSupport32Bit = true;
     };
+
+    environment.sessionVariables = {
+      WLR_NO_HARDWARE_CURSORS = "1";
+      NIXOS_OZONE_WL = "1";
+      MOZ_ENABLE_WAYLAND = "1";
+    };
+
+    programs.zsh.enable = true;
+    programs.dconf.enable = true;
+
+    users = {
+      defaultUserShell = pkgs.zsh;
+      users.cowe = {
+        isNormalUser = true;
+        extraGroups = [ "wheel" "networkmanager" ];
+      }; 
+    }; 
+
+    system.stateVersion = "23.11";
   };
 }
