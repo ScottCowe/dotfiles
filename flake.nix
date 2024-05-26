@@ -30,7 +30,11 @@
           };
 
           modules = [
-            { networking.hostName = hostname; }
+            { 
+              networking.hostName = hostname; 
+              system.stateVersion = "23.11";
+              nix.settings.experimental-features = [ "nix-command" "flakes" ];
+            }
 
             ./systems/${hostname}
             

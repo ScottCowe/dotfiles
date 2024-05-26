@@ -8,13 +8,12 @@
 
   config = {
     git.enable = true; 
+    ssh.enable = true;
 
     modules = {
       colors.enable = true;
-      # git.enable = true;
       zsh.enable = true;
       vim.enable = false;
-      ssh.enable = true;
       rofi.enable = true;
       gimp.enable = true;
       fonts.enable = true;

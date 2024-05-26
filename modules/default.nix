@@ -8,7 +8,6 @@
     ./colors
     ./zsh
     ./vim
-    ./ssh
     ./rofi
     ./gimp
     ./fonts

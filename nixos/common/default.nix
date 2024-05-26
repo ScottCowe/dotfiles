@@ -13,8 +13,6 @@ with lib; {
   };
 
   config = mkIf config.common.enable {
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
     nixpkgs.config.allowUnfree = true;
 
     time.timeZone = "Europe/London";
@@ -56,7 +54,5 @@ with lib; {
         extraGroups = [ "wheel" "networkmanager" ];
       }; 
     }; 
-
-    system.stateVersion = "23.11";
   };
 }
