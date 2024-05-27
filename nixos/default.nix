@@ -6,5 +6,6 @@
     ./grub
     ./nvidia 
     ./wooting
+    ./hamachi
   ];
 }

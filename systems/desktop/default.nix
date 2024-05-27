@@ -36,5 +36,7 @@
     };
 
     wooting.enable = true;
+
+    hamachi.enable = true;
   };
 }

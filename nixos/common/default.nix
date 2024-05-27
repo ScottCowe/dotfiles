@@ -53,6 +53,8 @@ with lib; {
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" ];
       }; 
-    }; 
+    };
+
+    programs.noisetorch.enable = true;
   };
 }
