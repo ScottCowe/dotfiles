@@ -9,6 +9,7 @@
   config = {
     git.enable = true; 
     ssh.enable = true;
+    easyeffects.enable = true;
 
     modules = {
       colors.enable = true;

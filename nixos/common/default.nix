@@ -54,7 +54,5 @@ with lib; {
         extraGroups = [ "wheel" "networkmanager" ];
       }; 
     };
-
-    programs.noisetorch.enable = true;
   };
 }
