@@ -38,12 +38,6 @@ with lib; {
       driSupport32Bit = true;
     };
 
-    environment.sessionVariables = {
-      WLR_NO_HARDWARE_CURSORS = "1";
-      NIXOS_OZONE_WL = "1";
-      MOZ_ENABLE_WAYLAND = "1";
-    };
-
     programs.zsh.enable = true;
     programs.dconf.enable = true;
 

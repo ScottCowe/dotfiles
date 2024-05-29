@@ -12,7 +12,7 @@
     ./gimp
     ./fonts
     ./thunar
-    ./neovim
+    # ./neovim
     ./firefox
     ./discord
     ./wezterm

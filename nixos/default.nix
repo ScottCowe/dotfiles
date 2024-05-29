@@ -6,6 +6,7 @@
     ./grub
     ./nvidia 
     ./wooting
-    ./hamachi
+    ./hamachi 
+    ./vim
   ];
 }

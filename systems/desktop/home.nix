@@ -10,16 +10,17 @@
     git.enable = true; 
     ssh.enable = true;
     easyeffects.enable = true;
+    neovim.enable = true;
 
     modules = {
       colors.enable = true;
       zsh.enable = true;
-      vim.enable = false;
+      # vim.enable = false;
       rofi.enable = true;
       gimp.enable = true;
       fonts.enable = true;
       thunar.enable = true;
-      neovim.enable = true;
+      # neovim.enable = true;
       firefox.enable = true;
       wezterm.enable = true;
       discord.enable = true;
