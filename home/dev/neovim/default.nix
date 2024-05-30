@@ -1,4 +1,4 @@
-{ lib, config, inputs, ... }:
+{ lib, config, inputs, system, ... }:
 
 with lib; {
   options.neovim = {
