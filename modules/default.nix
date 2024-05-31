@@ -6,8 +6,8 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
     ./colors
-    ./zsh
-    ./vim
+    # ./zsh
+    # ./vim
     ./rofi
     ./gimp
     ./fonts

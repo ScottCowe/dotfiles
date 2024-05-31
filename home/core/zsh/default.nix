@@ -1,19 +1,25 @@
-{ pkgs, lib, config, ... }:
+{ lib, config, ... }:
 
-with lib;
-let
-  cfg = config.modules.zsh;
-in {
-  options.modules.zsh = { enable = mkEnableOption "zsh"; };
-  config = mkIf cfg.enable {
+with lib; {
+  options.zsh = {
+    enable = mkOption {
+      type = types.bool;
+      default = true;
+      example = true;
+      description = mdDoc ''
+        Whether to enable home manager config for zsh 
+      '';
+    };
+  };
+
+  config = mkIf config.zsh.enable {
     programs.zsh = {
       enable = true;
       enableCompletion = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
 
-      shellAliases = {
-      };
+      shellAliases = {};
 
       history.size = 10000;
       history.path = "${config.xdg.dataHome}/zsh/history";

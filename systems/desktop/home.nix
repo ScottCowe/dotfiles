@@ -9,12 +9,15 @@
   config = {
     git.enable = true; 
     ssh.enable = true;
+    zsh.enable = true;
+
     easyeffects.enable = true;
+
     neovim.enable = true;
 
     modules = {
       colors.enable = true;
-      zsh.enable = true;
+      # zsh.enable = true;
       # vim.enable = false;
       rofi.enable = true;
       gimp.enable = true;

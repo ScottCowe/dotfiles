@@ -7,7 +7,7 @@ with lib; {
       default = true;
       example = true;
       description = mdDoc ''
-        Whether to enable ssh 
+        Whether to enable home manager config for ssh 
       '';
     };
   };

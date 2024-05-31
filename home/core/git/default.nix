@@ -7,7 +7,7 @@ with lib; {
       default = true;
       example = true;
       description = mdDoc ''
-        Whether to enable git 
+        Whether to enable home manager config for git 
       '';
     };
   };
