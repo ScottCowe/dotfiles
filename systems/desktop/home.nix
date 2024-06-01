@@ -13,7 +13,9 @@
 
     easyeffects.enable = true;
 
-    neovim.enable = true;
+    # neovim.enable = true;
+    dev.enable = true;
+    gaming.enable = true;
 
     modules = {
       colors.enable = true;
@@ -30,12 +32,12 @@
       packages.enable = true;
       hyprland.enable = true;
       alacritty.enable = true;
-      prismlauncher.enable = true;
+      # prismlauncher.enable = true;
       macchina.enable = true;
       mako.enable = true;
       wlogout.enable = true;
       lf.enable = true;
-      lutris.enable = true;
+      # lutris.enable = true;
       waybar.enable = true;
       kitty.enable = true;
     };

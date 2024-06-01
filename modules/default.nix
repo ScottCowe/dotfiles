@@ -19,12 +19,12 @@
     ./packages
     ./hyprland
     ./alacritty
-    ./prismlauncher
+    # ./prismlauncher
     ./macchina
     ./mako
     ./wlogout
     ./lf
-    ./lutris
+    # ./lutris
     ./waybar
     ./kitty
   ];

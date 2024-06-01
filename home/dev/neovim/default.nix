@@ -1,10 +1,10 @@
 { lib, config, inputs, system, ... }:
 
 with lib; {
-  options.neovim = {
+  options.dev.neovim = {
     enable = mkOption {
       type = types.bool;
-      default = true;
+      default = false;
       example = true;
       description = mdDoc ''
         Whether to enable neovim 
@@ -12,9 +12,7 @@ with lib; {
     };
   }; 
   
-  config = mkIf config.neovim.enable {
-    home.packages = [
-      inputs.nixvim-flake.packages.${system}.default
-    ];
+  config = mkIf config.dev.neovim.enable {
+    home.packages = [ inputs.nixvim-flake.packages.${system}.default ];
   }; 
 }
