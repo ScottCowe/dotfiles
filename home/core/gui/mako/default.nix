@@ -1,11 +1,13 @@
-{ pkgs, lib, config, ... }:
+{ lib, config, inputs, ... }:
 
-with lib;
-let
-  cfg = config.modules.mako;
-in {
-  options.modules.mako = { enable = mkEnableOption "mako"; };
-  config = mkIf cfg.enable {
+with lib; {
+  options.gui.mako = { 
+    enable = mkEnableOption "mako"; 
+  };
+
+  config = mkIf config.gui.mako.enable {
+    # colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha; 
+
     services.mako = with config.colorScheme.palette; {
       enable = true;
       backgroundColor = "#${base01}";

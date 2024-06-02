@@ -1,11 +1,18 @@
 { pkgs, lib, config, ... }:
 
-with lib;
-let
-  cfg = config.modules.hyprland;
-in {
-  options.modules.hyprland = { enable = mkEnableOption "hyprland"; };
-  config = mkIf cfg.enable {
+with lib; {
+  options.gui.hyprland = { 
+    enable = mkOption {
+      type = types.bool;
+      default = false;
+      example = true;
+      description = mdDoc ''
+        Whether to enable hyprland 
+      '';
+    };
+  };
+
+  config = mkIf config.gui.hyprland.enable {
     home.packages = with pkgs; [ 
       wl-clipboard
       grim slurp

@@ -1,11 +1,11 @@
 { pkgs, lib, config, ... }:
 
-with lib;
-let
-  cfg = config.modules.kitty;
-in {
-  options.modules.kitty = { enable = mkEnableOption "kitty"; };
-  config = mkIf cfg.enable {
+with lib; {
+  options.gui.kitty = { 
+    enable = mkEnableOption "kitty"; 
+  };
+  
+  config = mkIf config.gui.kitty.enable {
     programs.kitty = {
       enable = true;
 

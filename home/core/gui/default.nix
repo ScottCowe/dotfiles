@@ -2,13 +2,18 @@
 
 with lib; {
   imports = [
-
+    ./hyprland
+    ./mako
+    ./rofi
+    ./kitty
+    ./waybar
+    ./wlogout
   ];
 
   options.gui = {
     enable = mkOption {
       type = types.bool;
-      default = true;
+      default = false;
       example = true;
       description = mdDoc ''
         Whether to enable gui 
@@ -17,6 +22,13 @@ with lib; {
   };
 
   config = mkIf config.gui.enable {
-
+    gui = {
+      hyprland.enable = true;
+      mako.enable = true;
+      rofi.enable = true;
+      kitty.enable = true;
+      waybar.enable = true;
+      wlogout.enable = true;
+    };
   };
 }

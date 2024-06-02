@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }:
 
-with lib;
-let
-  cfg = config.modules.wlogout;
-in {
-  options.modules.wlogout = { enable = mkEnableOption "wlogout"; };
-  config = mkIf cfg.enable {
+with lib; {
+  options.gui.wlogout = { 
+    enable = mkEnableOption "wlogout"; 
+  };
+
+  config = mkIf config.gui.wlogout.enable {
     programs.wlogout = {
       enable = true;
       
