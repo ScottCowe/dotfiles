@@ -1,11 +1,11 @@
-{ pkgs, lib, config, inputs, ... }:
+{ lib, config, pkgs, inputs, ... }:
 
-with lib;
-let
-  cfg = config.modules.firefox;
-in {
-  options.modules.firefox = { enable = mkEnableOption "firefox"; };
-  config = mkIf cfg.enable {
+with lib; {
+  options.common.firefox = { 
+    enable = mkEnableOption "firefox"; 
+  };
+
+  config = mkIf config.common.firefox.enable {
     programs.firefox = {
       enable = true;
 

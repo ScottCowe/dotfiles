@@ -1,11 +1,11 @@
-{ pkgs, lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
-with lib;
-let
-  cfg = config.modules.discord;
-in {
-  options.modules.discord = { enable = mkEnableOption "discord"; };
-  config = mkIf cfg.enable {
+with lib; {
+  options.common.discord = { 
+    enable = mkEnableOption "discord"; 
+  };
+
+  config = mkIf config.common.discord.enable {
     nixpkgs.config.allowUnfree = true; 
     home.packages = with pkgs; [
       (discord.override {

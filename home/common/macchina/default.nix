@@ -1,11 +1,11 @@
-{ pkgs, lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
-with lib;
-let
-  cfg = config.modules.macchina;
-in {
-  options.modules.macchina = { enable = mkEnableOption "macchina"; };
-  config = mkIf cfg.enable {
+with lib; {
+  options.common.macchina = { 
+    enable = mkEnableOption "macchina"; 
+  };
+
+  config = mkIf config.common.macchina.enable {
     home.packages = with pkgs; [ macchina ];
 
     home.file.".config/macchina/macchina.toml".source = ./macchina.toml;

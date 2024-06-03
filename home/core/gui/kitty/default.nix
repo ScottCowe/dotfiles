@@ -38,7 +38,7 @@ with lib; {
         "alt+8" = "goto_tab 8";
         "alt+9" = "goto_tab 9";
         "alt+0" = "goto_tab 10";
-        "alt+shift+enter" = "new_window";
+        "alt+shift+enter" = "new_window_with_cwd";
         "alt+shift+q" = "close_window";
         "alt+h" = "neighboring_window left";
         "alt+j" = "neighboring_window bottom";

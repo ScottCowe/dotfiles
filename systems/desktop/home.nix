@@ -2,16 +2,27 @@
 
 {
   imports = [
-    ../../modules
     ../../home
   ];
 
   config = {
-    easyeffects.enable = true;
+    home.stateVersion = "23.11";
 
     gui.enable = true;
     dev.enable = true;
     gaming.enable = true;
+
+    common = {
+      easyeffects.enable = true;
+      lf.enable = true;
+      discord.enable = true;
+      firefox.enable = true;
+      gimp.enable = true;
+      macchina.enable = true;
+      bottom.enable = true;
+      libreoffice.enable = true;
+      thunderbird.enable = true;
+    };
 
     gaming.prismlauncher.theme = pkgs.stdenv.mkDerivation {
       name = "Catppuccin-Mocha-theme";
@@ -29,17 +40,6 @@
         mv $out/themes/Catppuccin-Mocha/* $out
         rm -rf $out/themes/
       '';
-    };
-
-    modules = {
-      colors.enable = true;
-      gimp.enable = true;
-      fonts.enable = true;
-      firefox.enable = true;
-      discord.enable = true;
-      packages.enable = true;
-      macchina.enable = true;
-      lf.enable = true;
     };
   };
 }

@@ -8,6 +8,8 @@ with lib; {
     ./kitty
     ./waybar
     ./wlogout
+    ./fonts
+    ./themes
   ];
 
   options.gui = {
@@ -29,6 +31,8 @@ with lib; {
       kitty.enable = true;
       waybar.enable = true;
       wlogout.enable = true;
+      fonts.enable = true;
+      themes.enable = true;
     };
   };
 }

@@ -1,7 +1,7 @@
 { lib, config, ... }:
 
 with lib; {
-  options.easyeffects = {
+  options.common.easyeffects = {
     enable = mkOption {
       type = types.bool;
       default = false;
@@ -12,7 +12,7 @@ with lib; {
     };
   };
 
-  config = mkIf config.easyeffects.enable {
+  config = mkIf config.common.easyeffects.enable {
     services.easyeffects.enable = true; 
   };
 }
