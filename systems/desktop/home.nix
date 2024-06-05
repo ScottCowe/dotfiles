@@ -6,8 +6,6 @@
   ];
 
   config = {
-    home.stateVersion = "23.11";
-
     gui.enable = true;
     dev.enable = true;
     gaming.enable = true;

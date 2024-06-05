@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 with lib; {
   options.ssh = {
@@ -15,10 +15,7 @@ with lib; {
   config = mkIf config.ssh.enable {
     programs.ssh = {
       enable = true;
-      extraConfig = ''
-        Host *
-        AddKeysToAgent yes
-      '';
+      addKeysToAgent = "yes";
     };
 
     services.ssh-agent.enable = true;

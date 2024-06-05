@@ -21,10 +21,8 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
-      mkSystem = pkgs: system: hostname:
+      mkSystem = pkgs: system: stateVersion: hostname:
         pkgs.lib.nixosSystem {
-          system = system;
-
           specialArgs = { 
             inherit inputs; 
           };
@@ -32,7 +30,7 @@
           modules = [
             { 
               networking.hostName = hostname; 
-              system.stateVersion = "23.11";
+              system.stateVersion = "${stateVersion}";
               nix.settings.experimental-features = [ "nix-command" "flakes" ];
             }
 
@@ -45,7 +43,10 @@
                   inherit inputs; 
                   inherit system;
                 };
-                users.cowe = (./. + "/systems/${hostname}/home.nix"); 
+                users.cowe = pkgs.lib.mkMerge [
+                  (./. + "/systems/${hostname}/home.nix")
+                  { home.stateVersion = "${stateVersion}"; }
+                ];
               };   
             }
           ];
@@ -53,8 +54,8 @@
     in
     {
       nixosConfigurations = {
-        desktop = mkSystem inputs.nixpkgs "x86_64-linux" "desktop";
-        hp-laptop = mkSystem inputs.nixpkgs "x86_64-linux" "hp-laptop";
+        desktop = mkSystem inputs.nixpkgs "x86_64-linux" "23.11" "desktop";
+        hp-laptop = mkSystem inputs.nixpkgs "x86_64-linux" "23.11" "hp-laptop";
       };
     };
 }
