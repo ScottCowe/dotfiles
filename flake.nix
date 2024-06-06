@@ -44,7 +44,7 @@
                   inherit system;
                 };
                 users.cowe = pkgs.lib.mkMerge [
-                  (./. + "/systems/${hostname}/home.nix")
+                  ./systems/${hostname}/home.nix
                   { home.stateVersion = "${stateVersion}"; }
                 ];
               };   
