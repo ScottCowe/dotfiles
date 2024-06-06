@@ -24,11 +24,35 @@ with lib; {
         y = "copy";
         x = "cut";
         p = "paste";
-        o = "editor-open";
+        O = "editor-open";
+        md = "mkdir";
+        mf = "mkfile";
+        # o = "view";
+
+        m = "";
       };
 
       commands = {
         editor-open = ''$$EDITOR $f'';
+        mkdir = ''
+          %{{
+          printf "Directory name: "
+          read DIR
+          mkdir $DIR
+          }}
+        '';
+        mkfile = ''
+          %{{
+          printf "File name: "
+          read FILE 
+          touch $FILE
+          }}
+        '';
+        # view = ''
+        #   $${{
+        #   ${pkgs.bat}/bin/bat "$f"
+        #   }}
+        # '';
       };
 
       extraConfig = 
