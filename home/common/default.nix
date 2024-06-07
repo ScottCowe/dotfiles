@@ -13,5 +13,6 @@
     ./libreoffice
     ./bat 
     ./eza
+    ./quickemu
   ];
 }
