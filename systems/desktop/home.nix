@@ -20,6 +20,8 @@
       bottom.enable = true;
       libreoffice.enable = true;
       thunderbird.enable = true;
+      bat.enable = true;
+      eza.enable = true;
     };
 
     gaming.prismlauncher.theme = pkgs.stdenv.mkDerivation {

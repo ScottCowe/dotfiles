@@ -24,12 +24,15 @@ with lib; {
         y = "copy";
         x = "cut";
         p = "paste";
+        o = "open";
         O = "editor-open";
         md = "mkdir";
         mf = "mkfile";
-        # o = "view";
+        dd = "delete";
+        r = "rename";
 
         m = "";
+        d = "";
       };
 
       commands = {
@@ -48,11 +51,23 @@ with lib; {
           touch $FILE
           }}
         '';
-        # view = ''
-        #   $${{
-        #   ${pkgs.bat}/bin/bat "$f"
-        #   }}
-        # '';
+        delete = ''
+          %{{ 
+          rm -r $f
+          }}
+        '';
+        rename = ''
+          %{{
+          prinf "New name: "
+          read NAME 
+          mv $f $NAME
+          }}
+        '';
+        open = ''
+          ''${{
+          ${pkgs.bat}/bin/bat --paging=always --style=numbers,changes $f 
+          }}
+        '';
       };
 
       extraConfig = 

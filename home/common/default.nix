@@ -11,5 +11,7 @@
     ./bottom 
     ./thunderbird 
     ./libreoffice
+    ./bat 
+    ./eza
   ];
 }
