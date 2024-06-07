@@ -30,6 +30,9 @@ with lib; {
         mf = "mkfile";
         dd = "delete";
         r = "rename";
+        az = "zip";
+        ag = "targz";
+        au = "unarchive";
 
         m = "";
         d = "";
@@ -66,6 +69,27 @@ with lib; {
         open = ''
           ''${{
           ${pkgs.bat}/bin/bat --paging=always --style=numbers,changes $f 
+          }}
+        '';
+        targz = ''
+          %{{
+          tar -czf $f.tar.gz $f
+          }}
+        '';
+        zip = ''
+          %{{
+          ${pkgs.zip}/bin/zip -r $f.zip $f
+          }}
+        '';
+        unarchive = ''
+          %{{
+          case "$f" in
+            *.zip) ${pkgs.unzip}/bin/unzip "$f" ;;
+            *.tar.gz) tar -xzvf "$f" ;;
+            *.tar.bz2) tar -xjvf "$f" ;;
+            *.tar) tar -xvf "$f" ;;
+            *)echo "Unsupported format" ;;
+          esac
           }}
         '';
       };
