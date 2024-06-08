@@ -6,6 +6,8 @@ with lib; {
   };
 
   config = mkIf config.common.lf.enable {
+    home.packages = with pkgs; [ sshfs ];
+
     home.file.".config/lf/icons".source = ./icons;
     home.file.".config/lf/colors".source = ./colors;
 
@@ -33,6 +35,8 @@ with lib; {
         az = "zip";
         ag = "targz";
         au = "unarchive";
+        sh = "mountssh";
+        SH = "umountssh";
 
         m = "";
         d = "";
@@ -90,6 +94,21 @@ with lib; {
             *.tar) tar -xvf "$f" ;;
             *)echo "Unsupported format" ;;
           esac
+          }}
+        '';
+        mountssh = ''
+          %{{
+          printf "user host port mount-point: "
+          read USER HOST PORT MNT 
+
+          sshfs $USER@$HOST: -oport=$PORT $MNT
+          }}
+        '';
+        umountssh = ''
+          %{{
+          printf "Mount point: "
+          read MNT
+          fusermount -u $MNT
           }}
         '';
       };
