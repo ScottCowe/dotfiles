@@ -17,6 +17,8 @@
     nixvim-flake.url = "github:ScottCowe/nixvim-flake";
 
     nix-colors.url = "github:misterio77/nix-colors";
+
+    ags.url = "github:Aylur/ags";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

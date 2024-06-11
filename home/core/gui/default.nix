@@ -10,6 +10,7 @@ with lib; {
     ./wlogout
     ./fonts
     ./themes
+    ./ags
   ];
 
   options.gui = {
@@ -33,6 +34,7 @@ with lib; {
       wlogout.enable = true;
       fonts.enable = true;
       themes.enable = true;
+      ags.enable = true;
     };
   };
 }
