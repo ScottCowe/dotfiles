@@ -1,11 +1,5 @@
-const myLabel = Widget.Label({
-    label: 'some example content',
-})
+import { applauncher } from "./applauncher.js"
 
-const myBar = Widget.Window({
-    name: 'bar',
-    anchor: ['top', 'left', 'right'],
-    child: myLabel,
+App.config({
+    windows: [applauncher],
 })
-
-App.config({ windows: [myBar] })
