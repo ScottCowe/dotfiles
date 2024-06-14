@@ -7,6 +7,7 @@ These are the dotfiles which I use on my computer and laptop
 - Shell: zsh
 - Editor: neovim
 - Window manager: Hyprland
+- Bar: waybar
 - Browser: Firefox
 - Theme: [Catppuccin Mocha](https://github.com/catppuccin)
 
