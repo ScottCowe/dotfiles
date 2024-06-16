@@ -22,7 +22,7 @@
       thunderbird.enable = true;
       bat.enable = true;
       eza.enable = true;
-      quickemu.enable = true;
+      # quickemu.enable = true;
     };
 
     gaming.prismlauncher.theme = pkgs.stdenv.mkDerivation {
