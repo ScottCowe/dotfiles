@@ -33,7 +33,7 @@ with lib; {
     wayland.windowManager.hyprland.settings = {
       "$mod" = "SUPER";
 
-      "exec-once" = "waybar";
+      "exec-once" = "ags";
 
       # To fix ghost monitor issue, apparantly a kernel/driver bug
       "monitor" = "Unknown-1,disable";
