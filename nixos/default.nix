@@ -8,5 +8,7 @@
     ./wooting
     ./hamachi 
     ./vim
+    ./wifi
+    ./bluetooth
   ];
 }

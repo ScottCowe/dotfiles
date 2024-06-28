@@ -22,5 +22,7 @@
         cp -r src/${name}/* $out
       '';
     };
+
+    wifi.enable = true;
   };
 }
